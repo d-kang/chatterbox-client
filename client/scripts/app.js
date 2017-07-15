@@ -5,6 +5,19 @@ $(function() {
   app.init = function() {};
   app.server = 'http://parse.hrr.hackreactor.com/chatterbox/classes/messages';
 
+  app.clearMessages = function(){
+    $("#chats").html('');
+  };
+
+  app.renderMessage = function(message) {
+    $('#chats').append(`<li>${message}</li>`);
+  };
+
+
+  app.renderRoom = function(roomname) {
+    $("#roomSelect").append(`<li>${roomname}</li>`);
+  };
+
   app.send = function(json) {
     $.ajax({
       type: 'POST',
