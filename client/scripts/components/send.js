@@ -8,6 +8,8 @@ app.send = msg => {
     contentType: "application/json",
     success: function (data) {
       console.log('POST request SUCCESS');
+      $('name').val('');
+      $('message').val('');
       app.fetch(data);
     },
     error: function (error) {
