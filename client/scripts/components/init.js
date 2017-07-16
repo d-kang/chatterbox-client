@@ -1,0 +1,1 @@
+app.init = () => {return 'hi'};

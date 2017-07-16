@@ -19,9 +19,14 @@
         window.location.search = newSearch;
       }
     </script>
-    <!-- your scripts -->
     <script src="env/config.js"></script>
-    <script src="scripts/app.js"></script>
+    <!-- your scripts -->
+    <script src="client/scripts/app.js"></script>
+    <script src="client/scripts/components/init.js"></script>
+    <script src="client/scripts/components/send.js"></script>
+
+
+
   </head>
   <body>
     <div id="main">
@@ -57,13 +62,7 @@
       <ul id="messages">
       </ul>
     </div>
-    <script src="http://caja.appspot.com/html-css-sanitizer-minified.js"></script>
-    
 
-    <script>
-    function urlX(url) { if(/^https?:\/\//.test(url)) { return url }}
-    function idX(id) { return id }
-    // alert(html_sanitize('<b>hello</b><img src="http://asdf"><a href="javascript:alert(0)"><script src="http://dfd"><\/script>', urlX, idX)) </script>
   </body>
 </html>
 
