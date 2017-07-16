@@ -3,9 +3,10 @@ app.send = msg => {
   $.ajax({
     url: app.server,
     type: 'POST',
-    data: msg,
+    data: JSON.stringify(msg),
     success: function (data) {
       console.log('POST request SUCCESS');
+      app.fetch();
     },
     error: function (error) {
       console.error('POST request FAILED');
