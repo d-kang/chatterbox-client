@@ -3,6 +3,7 @@ app.fetch = (a) => {
   $.ajax({
     url: app.server,
     type: 'GET',
+    data: { order: '-createdAt' },
     contentType: 'application/json',
     success: function(data) {
       console.log('GET request SUCCESS');

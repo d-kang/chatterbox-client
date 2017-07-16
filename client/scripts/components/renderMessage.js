@@ -1,21 +1,21 @@
 app.renderMessage = (msg) => {
   console.log({msg});
   var $chatbox = $('<div class=chats/>');
-  var $message = $('<br/><span/>');
+
   var name = msg.username || 'anonymous';
-  var renderText = `${msg.username}: ${msg.text} || ${msg.roomname}`
-  $chatbox.append($message.text(renderText));
-  console.log(msg);
-  // $chatbox.appendTo($chats);
+  var $username = $('<span class="username"/>');
+  $username.text(name + ': ').attr('data-roomname', msg.roomname).attr('data-username', name).appendTo($chatbox);
+
+  var $msg = $('<br/><span/>');
+  var renderText = `${msg.username}: ${msg.text} || ${msg.roomname}`;
+  $chatbox.append($msg.text(renderText));
+
   $('#chats').append($chatbox);
 };
 
-// app.renderMessage({username: "Mel Brooks", text: "Never underestimate the power of the Schwartz!", roomname: "lobby"})
-//
-//
 // var $chatbox = $('<div class=chats/>');
-// var $message = $('<br><span/>');
-// $chatbox.append($message.text( "Never underestimate the power of the Schwartz!"));
+// var $msg = $('<br><span/>');
+// $chatbox.append($msg.text( "Never underestimate the power of the Schwartz!"));
 // console.log(msg);
 // // $chatbox.appendTo($chats);
 // $chats.appendChild($chatbox)

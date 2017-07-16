@@ -3,5 +3,12 @@
 const app = {
   server,
   $chats,
-  $roomSelect
+  $roomSelect,
+  $send,
+  $message,
+  username:'anonymous',
+  roomname: 'lobby',
+  lastMessageId: 0,
+  friends: {},
+  messages: []
 };

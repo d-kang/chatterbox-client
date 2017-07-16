@@ -7,6 +7,3 @@ app.handleSubmit = (e) => {
   };
   app.send(message);
 };
-
-$('#send').on('submit', app.handleSubmit);
-// $('.submit').on('submit', app.handleSubmit);
