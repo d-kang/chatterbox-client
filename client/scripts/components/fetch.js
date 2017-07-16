@@ -6,6 +6,9 @@ app.fetch = (a) => {
     contentType: 'application/json',
     success: function(data) {
       console.log('GET request SUCCESS');
+      const results = data.results;
+      // pass results array to render msgs
+      app.renderMessages(results);
     },
     error: function(error) {
       console.error('GET request FAILED');

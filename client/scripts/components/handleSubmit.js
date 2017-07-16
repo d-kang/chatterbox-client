@@ -9,3 +9,4 @@ app.handleSubmit = (e) => {
 };
 
 $('#send').on('submit', app.handleSubmit);
+// $('.submit').on('submit', app.handleSubmit);
