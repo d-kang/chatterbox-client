@@ -1,4 +1,3 @@
-
 app.clearMessages = () => {
   $('#chats').html('');
 };
