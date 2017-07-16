@@ -2,5 +2,6 @@
 // import { server, $chats } from './vars.js';
 const app = {
   server,
-  $chats
+  $chats,
+  $roomSelect
 };
