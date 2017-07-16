@@ -4,9 +4,11 @@ app.send = msg => {
     url: app.server,
     type: 'POST',
     data: JSON.stringify(msg),
+    dataType: 'json',
+    contentType: "application/json",
     success: function (data) {
       console.log('POST request SUCCESS');
-      app.fetch();
+      app.fetch(data);
     },
     error: function (error) {
       console.error('POST request FAILED');

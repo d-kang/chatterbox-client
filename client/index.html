@@ -19,34 +19,24 @@
         window.location.search = newSearch;
       }
     </script>
-    <script src="env/config.js"></script>
-    <!-- your scripts -->
-    <script src="./scripts/vars.js"></script>
-    <script src="./scripts/app.js"></script>
-    <script src="./scripts/helpers.js"></script>
-    <script src="./scripts/components/renderMessage.js"></script>
-    <script src="./scripts/components/init.js"></script>
-    <script src="./scripts/components/fetch.js"></script>
-    <script src="./scripts/components/send.js"></script>
-
-
-
   </head>
   <body>
     <div id="main">
       <h1>chatterbox</h1>
-
       <div class="spinner"><img src="images/spiffygif_46x46.gif"></div>
-
       <div id="rooms">
         Room:
         <select id="roomSelect">
         </select>
       </div>
-
-
-
-      <form id="addmsg" method="post">
+      <form action="#" id="send" method="post">
+        <input type="text" name="message" id="name" placeholder="name"/>
+        <input type="text" name="message" id="message" placeholder="What's happening?"/>
+        <input type="submit" name="submit" class="submit"/>
+      </form>
+      </div>
+      <div id="chats"></div>
+      <!-- <form id="addmsg" method="post">
         <input
           id="name"
           type="text"
@@ -57,16 +47,25 @@
           type="text"
           placeholder="what's happening?" required/>
           <input type="submit" name="submit" class="submit" id='addmsg'/>
-        <!-- <button id='addmsg'>Add Message</button> -->
-      </form>
+      </form> -->
+      <!-- <button id='addmsg'>Add Message</button> -->
       <!-- Your HTML goes here! -->
-    </div>
-    <div id="chats">
-      2
-      <ul id="messages">
-      </ul>
-    </div>
+    <!-- </div>
+    <div id="chats"></div> -->
 
+
+    <script src="env/config.js"></script>
+    <!-- your scripts -->
+    <script src="./scripts/vars.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/helpers.js"></script>
+    <script src="./scripts/components/renderMessage.js"></script>
+    <script src="./scripts/components/init.js"></script>
+    <script src="./scripts/components/fetch.js"></script>
+    <script src="./scripts/components/send.js"></script>
+    <script src="./scripts/components/renderRoom.js"></script>
+    <script src="./scripts/components/handleUsernameClick.js"></script>
+    <script src="./scripts/components/handleSubmit.js"></script>
   </body>
 </html>
 
