@@ -1,4 +1,5 @@
 app.fetch = (a) => {
+  console.log('a from app.fetch', {a});
   $.ajax({
     url: app.server,
     type: 'GET',
