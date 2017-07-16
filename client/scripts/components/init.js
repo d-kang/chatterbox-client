@@ -1,1 +1,3 @@
-app.init = () => {return 'hi'};
+app.init = () => {
+  return 'hi'
+};
