@@ -26,8 +26,18 @@
   <body>
     <div id="main">
       <h1>chatterbox</h1>
-      1
-      <form id='addmsg'>
+
+      <div class="spinner"><img src="images/spiffygif_46x46.gif"></div>
+
+      <div id="rooms">
+        Room:
+        <select id="roomSelect">
+        </select>
+      </div>
+
+
+
+      <form id="addmsg" method="post">
         <input
           id="name"
           type="text"
@@ -37,7 +47,8 @@
           id="msg"
           type="text"
           placeholder="what's happening?" required/>
-        <button id='addmsg'>Add Message</button>
+          <input type="submit" name="submit" class="submit" id='addmsg'/>
+        <!-- <button id='addmsg'>Add Message</button> -->
       </form>
       <!-- Your HTML goes here! -->
     </div>
@@ -46,5 +57,17 @@
       <ul id="messages">
       </ul>
     </div>
+    <script src="http://caja.appspot.com/html-css-sanitizer-minified.js"></script>
+    
+
+    <script>
+    function urlX(url) { if(/^https?:\/\//.test(url)) { return url }}
+    function idX(id) { return id }
+    // alert(html_sanitize('<b>hello</b><img src="http://asdf"><a href="javascript:alert(0)"><script src="http://dfd"><\/script>', urlX, idX)) </script>
   </body>
 </html>
+
+
+<!-- <script>
+document.body.style.backgroundImage = "url('https://media.giphy.com/media/dVtGcobFMRXO0/giphy.gif')";
+</script> -->
