@@ -1,3 +1,13 @@
+app.handleSubmit = (e) => {
+  e.preventDefault();
+  var message = {
+    username: $('#name').val(),
+    text: $('#message').val(),
+    roomname: app.roomname || 'lobby'
+  };
+  app.send(message);
+};
+
 app.handleUsernameClick = e => {
   var username = $(e.target).data('username');
   if (username !== undefined) {
